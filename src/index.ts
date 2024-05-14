@@ -1,6 +1,8 @@
 import { Sorter } from "./classes/Sorter";
 import { CollectionNumber } from "./classes/CollectionNumbers";
-const sorter = new CollectionNumber([-2,-3,10,4,8]);
 
-console.log(sorter.length);
+const collection = new CollectionNumber([1,-5,-2,10,5,80,70])
+const sorter = new Sorter(collection);
+sorter.sort();
+console.log(collection.data);
 

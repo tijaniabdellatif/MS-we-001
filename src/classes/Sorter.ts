@@ -1,6 +1,8 @@
+import { CollectionNumber } from "./CollectionNumbers";
+
 export class Sorter {
   //   collection:number[];
-  constructor(public collection:number[]) {}
+  constructor(public collection:CollectionNumber) {}
 
   sort(): void {
     const { length } = this.collection;
@@ -10,10 +12,8 @@ export class Sorter {
       for (let j = 0; j < length - i - 1; j++) {
     
       
-            if (this.collection[j] > this.collection[j + 1]) {
-                let temp = this.collection[j];
-                this.collection[j] = this.collection[j + 1];
-                this.collection[j + 1] = temp;
+            if (this.collection.compare(j,j+1)) {
+               this.collection.swap(j,j+1)
               }
       }
     }
