@@ -6,15 +6,17 @@
   "type": "commonjs",
   "scripts": {
     "start:build": "tsc -w",
-    "start:run":"nodemon build/index.js",
+    "start:run": "nodemon build/index.js",
     "start": "concurrently npm:start:*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tijaniabdellatif/shared": "^2.1.7",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "winston": "^3.13.0"
   }
 }
